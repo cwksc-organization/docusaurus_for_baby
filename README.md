@@ -24,7 +24,7 @@ It is a presetuped template created by docusaurus, for baby, for github pages
 
 ## Get started
 
-Fork this repository, `Settings > Pages > Build and deployment >  Source > GitHub Actions`
+Fork this repository, then `Settings > Pages > Build and deployment > Source` set to `GitHub Actions`
 
 ### Common config
 
@@ -78,4 +78,5 @@ Github page will be deployed, for this repository it is https://cwksc-organizati
 ## Develop / Contribute
 
 Look at `develop/`
+
 
