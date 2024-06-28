@@ -26,6 +26,8 @@ It is a presetuped template created by docusaurus, for baby, for github pages
 
 Fork this repository, then `Settings > Pages > Build and deployment > Source` set to `GitHub Actions`
 
+Go `Actions`, enable github actions workflow
+
 ### Common config
 
 Modify `volume/common.ts`, change `github_username` and `repo_name`
