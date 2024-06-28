@@ -24,15 +24,15 @@ It is a presetuped template created by docusaurus, for baby, for github pages
 
 ## Get started
 
-Fork this repository, open in VSCode
+Fork this repository, `Settings > Pages > Build and deployment >  Source > GitHub Actions`
 
 ### Common config
 
 Modify `volume/common.ts`, change `github_username` and `repo_name`
 
 ```typescript
-export const github_username = "CWKSC"
-export const repo_name: String = "docusaurus_for_baby_dev"
+export const github_username = "cwksc-organization"
+export const repo_name: String = "docusaurus_for_baby"
 ```
 
 For example, change `repo_name` to `xxxxx.github.io`
@@ -48,7 +48,7 @@ This is where the `.md` markdown is
 Modify `volume/config/themeConfig/navbar.ts`
 
 ```typescript
-import { github_username } from '../common';
+// ...
 
 export const navbar = {
     // ...
