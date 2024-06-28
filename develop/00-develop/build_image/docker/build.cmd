@@ -1,0 +1,1 @@
+docker image build --tag docusaurus_for_baby_develop_image --file ../Containerfile ..

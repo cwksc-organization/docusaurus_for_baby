@@ -1,0 +1,30 @@
+FROM public.ecr.aws/docker/library/node:20.15
+
+# Config
+ENV docusaurus_version=3.4.0
+
+EXPOSE 3000
+
+# Common env
+# tzdata
+# https://dev.to/grigorkh/fix-tzdata-hangs-during-docker-image-build-4o9m
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#HONG_KONG
+# ENV TZ=Asia/Hong_Kong
+# https://askubuntu.com/questions/909277/avoiding-user-interaction-with-tzdata-when-installing-certbot-in-a-docker-contai
+# ARG DEBIAN_FRONTEND=noninteractive
+# https://github.com/facebook/create-react-app/issues/7251#issuecomment-827602712
+# ENV BROWSER=none
+
+WORKDIR /workspace
+
+RUN npm install -g npm@latest && \
+    npx create-docusaurus@${docusaurus_version} docusaurus_for_baby classic --typescript
+
+WORKDIR /workspace/docusaurus_for_baby
+
+RUN npm install \
+    @docusaurus/plugin-content-docs \
+    @docusaurus/plugin-content-blog \
+    remark-math@6 rehype-katex@7 \
+    @easyops-cn/docusaurus-search-local
+

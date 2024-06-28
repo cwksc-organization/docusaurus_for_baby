@@ -1,0 +1,59 @@
+name: Build and deploy github pages
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Build develop image
+      run: >
+        docker build . 
+        --file ./develop/00-develop/build_image/Containerfile 
+        --tag docusaurus_for_baby_develop_image
+
+    - name: Build build image
+      run: >
+        docker build ./volume 
+        --file ./develop/01-build/build_image/Containerfile 
+        --tag docusaurus_for_baby_build_docs_image
+
+    - name: Create build folder for receive build from container
+      run: mkdir build
+    
+    - name: Build from container
+      run: >
+        docker container run
+        --volume ./build/:/workspace/docusaurus_for_baby/build/
+        docusaurus_for_baby_build_docs_image
+        npm run build
+
+    - uses: actions/upload-pages-artifact@v3
+      with:
+        path: build
+
+  # https://github.com/actions/deploy-pages
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+      
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

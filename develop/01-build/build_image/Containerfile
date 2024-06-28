@@ -1,0 +1,5 @@
+FROM docusaurus_for_baby_develop_image
+
+WORKDIR /workspace/docusaurus_for_baby
+
+COPY . .
