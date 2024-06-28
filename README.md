@@ -73,6 +73,8 @@ Github action is setuped, it will build container and deploy to github pages
 
 It will run around 2 min
 
+Github page will be deployed, for this repository it is https://cwksc-organization.github.io/docusaurus_for_baby/
+
 ## Develop / Contribute
 
 Look at `develop/`
