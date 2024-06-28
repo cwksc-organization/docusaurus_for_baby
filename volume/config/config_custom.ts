@@ -10,7 +10,7 @@ import { plugins } from './plugins';
 import { i18n } from './i18n';
 
 let baseUrl = `/${repo_name}/`
-if (repo_name == `${github_username}.github.io`) {
+if (repo_name == `${github_username}.github.io`.toLowerCase()) {
     baseUrl = "/"
 }
 
