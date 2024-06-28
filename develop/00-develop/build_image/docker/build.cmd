@@ -1,1 +1,3 @@
-docker image build --tag docusaurus_for_baby_develop_image --file ../Containerfile ..
+docker image build . ^
+    --file ../Containerfile ^
+    --tag docusaurus_for_baby_develop_image
