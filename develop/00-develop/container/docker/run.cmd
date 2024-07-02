@@ -13,5 +13,6 @@ docker container run ^
     --volume "%cd%/../../../../volume/multidocs/:/workspace/docusaurus_for_baby/multidocs/" ^
     --volume "%cd%/../../../../volume/run.sh:/workspace/docusaurus_for_baby/run.sh" ^
     --volume "%cd%/../../../../volume/src/:/workspace/docusaurus_for_baby/src/" ^
+    --volume "%cd%/../../../../volume/static/:/workspace/docusaurus_for_baby/static/" ^
     docusaurus_for_baby_develop_image ^
     ./run.sh 

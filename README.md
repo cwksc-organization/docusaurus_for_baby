@@ -69,6 +69,10 @@ Change `items` to what you want, it is just simple link on top navigation bar
 
 Look at `volume/config/themeConfig/prism.ts` if you want to support more language highlighting
 
+### Favicon and logo
+
+Replace file under `static/img`: `favicon.ico`, `logo.svg`
+
 ### Github action and deploy
 
 Github action is setuped, it will build container and deploy to github pages
@@ -80,5 +84,64 @@ Github page will be deployed, for this repository it is https://cwksc-organizati
 ## Develop / Contribute
 
 Look at `develop/`
+
+There are two folder: `00-develop`, `01-build`
+
+Under each folder: `build_image`, `container`
+
+`00-develop` for develop and debug
+
+`01-build` for build site and deploy 
+
+Build develop image, start container, attach to container, inside container, Run `./run.sh`
+
+```bash
+
+> docusaurus-for-baby@0.0.0 serve
+> docusaurus serve --build --port 3000 --host 0.0.0.0
+
+[INFO] [en] Creating an optimized production build...
+
+✔ Client
+  Compiled successfully in 31.37s
+
+✔ Server
+  
+
+
+● Client █████████████████████████ cache (99%) shutdown IdleFileCachePlugin
+ stored
+
+✔ Server
+  
+
+Overwriting existing registered function: lunr-multi-trimmer-en-zh
+Overwriting existing registered function: lunr-multi-trimmer-en-zh
+Overwriting existing registered function: lunr-multi-trimmer-en-zh
+Overwriting existing registered function: lunr-multi-trimmer-en-zh
+[SUCCESS] Generated static files in "build".
+[INFO] Use `npm run serve` command to test your build locally.
+[SUCCESS] Serving "build" directory at: http://0.0.0.0:3000/docusaurus_for_baby/
+```
+
+Go http://localhost:3000/docusaurus_for_baby/
+
+## Note
+
+### Math Equations
+
+https://docusaurus.io/docs/markdown-features/math-equations
+
+### Code blocks highlight
+
+https://docusaurus.io/docs/markdown-features/code-blocks
+
+https://prismjs.com/#supported-languages
+
+### Search
+
+https://docusaurus.io/docs/search
+
+https://github.com/easyops-cn/docusaurus-search-local
 
 
