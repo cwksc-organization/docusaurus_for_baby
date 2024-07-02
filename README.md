@@ -93,7 +93,9 @@ Under each folder: `build_image`, `container`
 
 `01-build` for build site and deploy 
 
-Build develop image, start container, attach to container, inside container, Run `./run.sh`
+Build image, start and attach to container, inside container
+
+Run `./run.sh`
 
 ```bash
 

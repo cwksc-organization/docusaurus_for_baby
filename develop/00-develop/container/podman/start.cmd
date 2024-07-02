@@ -16,5 +16,5 @@ podman container run ^
     --volume ../../../../volume/run.sh:/workspace/docusaurus_for_baby/run.sh ^
     --volume ../../../../volume/src/:/workspace/docusaurus_for_baby/src/ ^
     --volume ../../../../volume/static/:/workspace/docusaurus_for_baby/static/ ^
-    --volume ../../../../volumn/.vscode/:/workspace/docusaurus_for_baby/.vscode/ ^
+    --volume ../../../../volume/.vscode/:/workspace/docusaurus_for_baby/.vscode/ ^
     docusaurus_for_baby_develop_image
