@@ -16,11 +16,11 @@ It is a presetuped template created by docusaurus, for baby, for github pages
 
 > [!NOTE]
 >
-> When learning and setuping `docusaurus`, I found there are still somethings need to be config
+> When learning `docusaurus`, I found there are still somethings need to be config
 > 
 > For example, I like dark mode as default
 > 
-> To support multi document site, I need to add `@docusaurus/plugin-content-docs` to plugins manually, also math equation ... and many other things, so I make this presetuped template
+> To support multi document site, I need to add `@docusaurus/plugin-content-docs` to plugins manually, also math equation, search ... and many other things, so I make this presetuped template
 
 ## Get started
 
@@ -63,7 +63,7 @@ export const navbar = {
 };
 ```
 
-Change `items` to what you want, it is just similar link on top navigation bar
+Change `items` to what you want, it is just simple link on top navigation bar
 
 ### Code blocks highlighting
 
